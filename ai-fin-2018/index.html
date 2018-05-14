@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>파이썬 금융</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <style>
+    @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+    header {
+        height: 100px;
+        background-color: rgba(125, 211, 242, 0.5);
+        border-radius: 15px;
+        padding: 10px;
+        margin: 10px 0;
+        font-family: 'Nanum Gothic', sans-serif;
+        text-align: center;
+    }
+
+    header {
+        height: 100px;
+        background-color: rgba(255, 0, 0, 0);
+        border-radius: 15px;
+        padding: 10px;
+        margin: 10px 0;
+        font-family: 'Nanum Gothic', sans-serif;
+        text-align: center;
+    }
+
+    footer {
+        font-family: 'Nanum Gothic', sans-serif;
+        text-align: center;
+    }
+
+    ul.nav {
+        background-color: rgba(201, 201, 201, .5);
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .red {
+        background-color: rgba(225, 0, 0, 1);
+        padding: 10px;
+        margin: 0px;
+        color: rgb(255, 255, 255);
+    }
+
+    .gray {
+        background-color: #DCDCDC;
+        padding: 10px;
+        width: 100%;
+        margin: 0px;
+    }
+
+    .nogray {
+        padding: 10px;
+        margin: 0px;
+    }
+
+    #map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 style="font-weight:bold;">금융 데이터, ​머신러닝을 만나다 (주말반) <br>
+      <small style="font-weight:bold;">AI 아카데미</small></h1>
+        </header>
+        <div class="container" align="center">
+            <br>
+            <img src="https://github.com/YongBeomKim/FinanceBasic2018/raw/master/data/image1.jpg" width="95%">
+            <br>
+            <br>
+            <br>
+        </div>
+        <div class="row">
+            <div class="col-md-6" align="center">
+                <!--       <img src="../images/pandas1.png" width="95%" align="center"/> -->
+                <img src="http://www.hanbit.co.kr/data/books/B4965740442_l.jpg" width="200" align="center" />
+                <img src="http://developerfarm.cdn1.cafe24.com/cover/l/9791158390631.jpg" width="200" align="center" />
+            </div>
+            <div class="col-md-6 cont">
+                <h2 class="text-primary" style="font-weight:bold;">강의목표 </h2>
+                <br>
+                <p>본 강의의 목적은 공개 오픈소스 툴인 <strong>파이썬 언어</strong>의 기초를 익히고, 이를 활용하여 <strong>Pandas 모듈</strong>을 활용하여 다양한 금융 기술적 분석 능력을 스스로 갖출 수 있도록 실습과 이론을 통하여 배울 수 있도록 진행합니다. 이러한 바탕위에 <strong>'hmmlearm', 'statemodel', 'prophet', 'keras' 모듈</strong>에 어떤 방식으로 응용 확장을 학습 함으로써 본 강의를 통해서 수강생들이 단순한 실습만 아니라 실제적으로 각자의 업무에 어떻게 적용하는지에 대한 실무적 아이디어를 얻어 가실 수 있습니다.</p>
+                <br>
+                <br>
+            </div>
+            <div>
+                <br>
+                <h2 class="text-primary" style="font-weight:bold;"> &nbsp;&nbsp;&nbsp;&nbsp; 수강대상 </h2>
+                <br>
+                <div class="col-md-4" align="center">
+                    <h4><STRONG>시계열 데이터를 다루기 원하시는 분</STRONG> </h4>
+                    <p><small><strong>Python의 기본 원리와 문법</strong> 내용을 정리하고, 이를 바탕으로 <strong>Pandas 모듈을 활용한 시계열 데이터</strong>를 다루는 방법을 진행합니다</small></p>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <div class="col-md-4" align="center">
+                    <h4><strong>금융 Simulation을 구현하기 원하는 분</strong></h4>
+                    <p><small>독자적 투자기술과 이론에 대한 실습을 다루는 내용을 진행합니다</small></p>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <div class="col-md-4" align="center">
+                    <h4><strong>머신러닝 이론을 적용해 보고 싶은 분</strong></h4>
+                    <p><small><strong>Pandas로 생성한 DataFrame 데이터</strong>를 바탕으로, 기본적인 금융분석 내용과 <strong>머신러닝 이론 활용한 금융데이터 방향성</strong>을 분석 및 예측하는 과정을 진행합니다</small></p>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <div class="container" align="center">
+                <br>
+                <img src="https://github.com/YongBeomKim/FinanceBasic2018/raw/master/data/image2.jpg" width="80%" align="center">
+                <br>
+                <br>
+                <br>
+            </div>
+            <div class="row">
+                <div class="col-md-6 cont">
+                    <h2 class="text-primary" style="font-weight:bold;"> &nbsp;&nbsp;&nbsp;&nbsp; 강의목차 (jupyter notebook) </h2>
+                    <br>
+                    <h3><strong>1 파이썬 기초 및 Data & Datum <small class="text-primary">
+    <a href="http://nbviewer.jupyter.org/github/YongBeomKim/FinanceBasic2018/blob/master/01.Data.ipynb"><br>Jupyter Notebook</a></small></strong></h3>
+                    <br>
+                    <h3><strong>2 문자열 데이터와 사용자 함수 기초 <small class="text-primary"><br>
+    <a href="http://nbviewer.jupyter.org/github/YongBeomKim/FinanceBasic2018/blob/master/02.String_Function.ipynb">Jupyter Notebook</a></small></strong></h3>
+                    <br>
+                    <h3><strong>3 Pandas 모듈의 기본</strong><small class="text-primary"><br>
+    <a href="http://nbviewer.jupyter.org/github/YongBeomKim/FinanceBasic2018/blob/master/03.Pandas_Numpy.ipynb">Jupyter Notebook</a></small></h3>
+                    <br>
+                    <h3><strong>4 Pandas 로 시계열 데이터 다루기</strong><small class="text-primary"><BR>
+    <a href="http://nbviewer.jupyter.org/github/YongBeomKim/FinanceBasic2018/blob/master/04.Pandas_Static.ipynb">Jupyter Notebook</a></small></h3>
+                    <br>
+                    <h3><strong>5 Pandas 활용한 금융데이터 분석</strong><small class="text-primary"><br>
+    <a href="http://nbviewer.jupyter.org/github/YongBeomKim/FinanceBasic2018/blob/master/05.Python_finance.ipynb">Jupyter Notebook</a></small></h3>
+                    <Br>
+                    <h3><strong>6 머신러닝 기본 모듈을 활용한 금융데이터 분석</strong><small class="text-primary"><br>
+    <a href="http://nbviewer.jupyter.org/github/YongBeomKim/FinanceBasic2018/blob/master/06.Python_Predictions.ipynb">Jupyter Notebook</a></small></h3>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h2 class="text-primary" style="font-weight:bold;"> &nbsp;&nbsp;&nbsp;&nbsp; 과정상세 </h2>
+                    <br>
+                    <p> &nbsp;&nbsp; 금융데이터 분석수업을 진행하면서 다양한 모듈과, 새로운 버젼이 제공될때마다 관련 코드의 내용이 다름에 따른 대처를 못함으로써 곤란함을 격는 경우를 많이 봤습니다
+                        <br>
+                        <br> &nbsp;&nbsp; <strong>기업별 종가 데이터</strong>를 활용한 <strong>분석 및 예측</strong>을 진행하는 이번 수업에서는, 1) 파이썬의 기본 이론을 충분히 학습한 뒤 2) <strong>Pandas 모듈을 활용</strong>하여 <strong>데이터 수집, 분석, 금융데이터 다루기(시계열 데이터 다루기)를</strong> 집중적으로 진행합니다
+                        <br>
+                        <br> &nbsp;&nbsp; 3) <strong>Pandas로 생성한 기업별 종가 DataFrame</strong> 데이터를 바탕으로 <strong>시각화, BackTesting, Risk관리</strong> 그리고 <strong>머신러닝 기본 이론을 적용한 '종가 데이터를 활용한 주가예측</strong>을 진행합니다
+                        <br>
+                        <br> &nbsp;&nbsp; 4) <strong>종가 데이터</strong>를 활용한 주가 예측은 <strong>'hidden Markov model', 'ARIMA'시계열 패턴 예측, Prophet (R), Keras LSTM</strong>을 활용한 방법을 다룹니다
+                        <br>
+                        <br> &nbsp;&nbsp; 위에서 다룬 모듈 중 <strong>대표적인 모듈인 Pandas 를 통해서 Python의 기본 철학</strong>에 익숙해 지신다면, 다른 어떠한 모듈에 대해서도 두려움 없이 접근하고 학습의 방향을 스스로 정할 수 있는 능력을 배양할 기회가 될것입니다.</p>
+                    <br>
+                    <br>
+                </div>
+                <div class="col-md-6">
+                    <br>
+                    <blockquote class="pull-left" style="font-weight:bold;">
+                        BackTesting 전략분석
+                        <small>SK 하이닉스 </small>
+                    </blockquote>
+                    <img src="https://raw.githubusercontent.com/YongBeomKim/FinanceBasic2018/master/data/MMCA.png" width="80%" align="center" />
+                    <br>
+                    <br>
+                    <blockquote class="pull-left" style="font-weight:bold;">
+                        포트폴리오 최적 분산비율 예측
+                        <small>몬테카를로 시뮬레이션을 활용</small>
+                    </blockquote>
+                    <img src="https://raw.githubusercontent.com/YongBeomKim/FinanceBasic2018/master/data/portfolio.png" width="80%" align="center" />
+                    <br>
+                    <br>
+                    <blockquote class="pull-left" style="font-weight:bold;">
+                        Prophet R 을 활용한 종가의 Pattern 분석
+                        <small>테슬라 종가 데이터</small>
+                    </blockquote>
+                    <img src="https://raw.githubusercontent.com/YongBeomKim/FinanceBasic2018/master/data/tesla-prophetR.png" width="80%" align="center" />
+                    <br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="https://avatars3.githubusercontent.com/u/26833539?s=460&v=4" width="200" align="right">
+                    <p></p>
+                </div>
+                <div class="col-md-8 cont">
+                    <h2 class="text-primary" style="font-weight:bold;" align="left"><small>강사</small> 김용범 <small>약력</small><br>
+    <small ><a href="https://github.com/YongBeomKim">(GitHub)</small></a>
+    <small class="text-primary"><a href="https://yongbeomkim.github.io/">(GitBlog)</small></a>
+    <small class="text-primary">saltman21@naver.com</small>
+  </h3>
+
+  <h4 ><strong>금융 빅테이터 전문가 1기 (한국 데이터 진흥원)</strong><small class="text-primary"></small></h4>
+  <h4 ><strong>SK T아카데미 '머신러닝 스터디' 진행 (2018.4 ~)</strong><small class="text-primary"></small></h4>  <h4 ><strong>(전) 동부대우 일렉트로닉스 (UI)</strong><small class="text-primary"></small></h4>
+  <h4 ><strong>(전) 한솔 CNS 로지스틱스 (용인)</strong><small class="text-primary"></small></h4>
+  <h4 ><strong>(현) 무영인터내쇼날 (SI 개발관리) </strong><small class="text-primary"></small></h4>
+
+    </div>
+</div>
+
+
+<br><br>
+  <div align="left" class="red">
+      <h3><STRONG><a style="color:white" href="https://www.ai-academy.ai/events/geum-yung-deiteo-dibleoning-eul-mannada/form">
+      &nbsp;&nbsp;&nbsp; 신청 페이지 바로가기</a></STRONG></h3>
+  </div>
+
+  <div align="left" class="gray" >
+      <h4><STRONG>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 모집대상 :</STRONG> Python 기본 문법과 금융 데이터 분석을 시작하고 싶으신 분</h4>
+  </div>
+
+  <div align="left" class="nogray" >
+      <h4><STRONG>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 일시 :</STRONG> 5월 26일(토), 6월 2일(토)
+        10시~18시 (총 14시간)</h4>
+  </div>
+
+  <div align="left" class="gray" >
+      <h4><STRONG>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 비용 :</STRONG><strike>정상가 49만원</strike>(공간비, 다과비 포함)<br><Br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 얼리버드 할인 : <STRONG>28만원 (40%할인)</STRONG> / 5월 22일까지<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 오픈특가 할인 : <STRONG>34만원 (30%할인)</STRONG><br>
+  </div>
+
+  <div align="left" class="nogray" >
+      <h4><STRONG>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 입금계좌 :</STRONG> 우리은행 <strong>1005-003-414906 (주)에이아이아카데미<strong></h4>
+  </div>
+
+
+  <div align="left" class="gray" >
+      <h4><STRONG>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 문의전화 :</STRONG> 010-8079-2260 (AI 아카데미) <br><br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  * 혹시 전화를 못받을 수 있으니 문자나 톡으로 남겨주면 감사하겠습니다. *
+      </h4>
+  </div>
+
+  <div align="left" class="nogray" >
+      <h4><STRONG>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 환불규정 : </STRONG> 강의시작 <Strong>하루 전</Strong>까지 환불가능 <strong>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; * 강의 시작후 환불불가 *</strong> </h4>
+  </div>
+
+  <div align="left" class="red" >
+      <h4><STRONG>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 개인 노트북을 꼭 지참해 주시기 바랍니다</strong> </h4>
+  </div>
+
+
+  <div align="left" class="gray" >
+      <h4><STRONG>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 강의장소 :</STRONG> 서울스퀘어 4층, 위워크 내 클래스룸
+ <br><br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <strong><small>Seoul Square 서울 중구 한강대로 416 (지번주소 : 서울 중구 남대문로5가 541)  </small></strong>
+      </h4>
+  </div>
+
+<br><br>
+
+
+<!-- http://webagit.tistory.com/92 구글맵 추가하기 -->
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&language=ko"></script>
+
+ <script>
+  function initialize() {
+  var myLatlng = new google.maps.LatLng(37.555515, 126.973433); // y, x좌표값
+  var mapOptions = {
+        zoom: 15,
+        center: myLatlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+  }
+
+  var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+  var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: "회사이름"
+  });
+  var infowindow = new google.maps.InfoWindow(
+          {
+            content: "<h1>회사이름</h1>",
+            maxWidth: 300
+          }
+  );
+
+  google.maps.event.addListener(marker, 'click', function() {
+  infowindow.open(map, marker);
+  });
+  }
+ </script>
+
+
+<body onload="initialize()" align="center">
+<div align="center">
+<div id="map_canvas" style="width:600px; height:400px;" align="center"></div>
+</div>
+</body>
+
+<br><br>
+
+</div>
+
+   <footer>
+   </footer>
+  </div>
+</body>
+</html>
